@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><script src="/docs/5.3/assets/js/color-modes.js"></script>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+        <meta name="generator" content="Hugo 0.112.5">
+        <title>Blog Template · Bootstrap v5.3</title>
+    
+        <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/blog/">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css ">
+     
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    
+        <!-- Favicons -->
+    <link rel="apple-touch-icon" href="/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="manifest" href="/docs/5.3/assets/img/favicons/manifest.json">
+    <link rel="mask-icon" href="/docs/5.3/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
+    <link rel="icon" href="/docs/5.3/assets/img/favicons/favicon.ico">
+    <meta name="theme-color" content="#712cf9">
+    
+    
+        <style>
+          .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+          }
+    
+          @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+              font-size: 3.5rem;
+            }
+          }
+    
+          .b-example-divider {
+            width: 100%;
+            height: 3rem;
+            background-color: rgba(0, 0, 0, .1);
+            border: solid rgba(0, 0, 0, .15);
+            border-width: 1px 0;
+            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+          }
+    
+          .b-example-vr {
+            flex-shrink: 0;
+            width: 1.5rem;
+            height: 100vh;
+          }
+    
+          .bi {
+            vertical-align: -.125em;
+            fill: currentColor;
+          }
+    
+          .nav-scroller {
+            position: relative;
+            z-index: 2;
+            height: 2.75rem;
+            overflow-y: hidden;
+          }
+    
+          .nav-scroller .nav {
+            display: flex;
+            flex-wrap: nowrap;
+            padding-bottom: 1rem;
+            margin-top: -1px;
+            overflow-x: auto;
+            text-align: center;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+          }
+    
+          .btn-bd-primary {
+            --bd-violet-bg: #712cf9;
+            --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+    
+            --bs-btn-font-weight: 600;
+            --bs-btn-color: var(--bs-white);
+            --bs-btn-bg: var(--bd-violet-bg);
+            --bs-btn-border-color: var(--bd-violet-bg);
+            --bs-btn-hover-color: var(--bs-white);
+            --bs-btn-hover-bg: #6528e0;
+            --bs-btn-hover-border-color: #6528e0;
+            --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+            --bs-btn-active-color: var(--bs-btn-hover-color);
+            --bs-btn-active-bg: #5a23c8;
+            --bs-btn-active-border-color: #5a23c8;
+          }
+          .bd-mode-toggle {
+            z-index: 1500;
+          }
+          .bg-body-secondary{
+            text-align: center;
+    background-image: url("untitled_design.jpg") ;
+    background-size: cover;
+    margin: auto;
+     background-repeat: no-repeat;
+
+          }
+        </style>
+    
+        
+        <!-- Custom styles for this template -->
+        <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900&amp;display=swap" rel="stylesheet">
+        <!-- Custom styles for this template -->
+        <link href="blog.css" rel="stylesheet">
+      </head>
+<body>
+    <body data-new-gr-c-s-check-loaded="14.1113.0" data-gr-ext-installed="">
+        <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+          <symbol id="check2" viewBox="0 0 16 16">
+            <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"></path>
+          </symbol>
+          <symbol id="circle-half" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"></path>
+          </symbol>
+          <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+            <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"></path>
+            <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
+          </symbol>
+          <symbol id="sun-fill" viewBox="0 0 16 16">
+            <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+          </symbol>
+        </svg>
+    
+        <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+          <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (dark)">
+            <svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
+            <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+                <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#sun-fill"></use></svg>
+                Light
+                <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="dark" aria-pressed="true">
+                <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
+                Dark
+                <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto" aria-pressed="false">
+                <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#circle-half"></use></svg>
+                Auto
+                <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+              </button>
+            </li>
+          </ul>
+        </div>
+    
+        
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+      <symbol id="aperture" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="10"></circle>
+        <path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"></path>
+      </symbol>
+      <symbol id="cart" viewBox="0 0 16 16">
+        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"></path>
+      </symbol>
+      <symbol id="chevron-right" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"></path>
+      </symbol>
+    </svg>
+    
+    <div class="container">
+      <header class="border-bottom lh-1 py-3">
+        <div class="row flex-nowrap justify-content-between align-items-center">
+          <div class="col-4 pt-1">
+            <a class="link-secondary" href="#">Subscribe</a>
+          </div>
+          <div class="col-4 text-center">
+            <a class="blog-header-logo text-body-emphasis text-decoration-none" href="#">Emy</a>
+          </div>
+          <div class="col-4 d-flex justify-content-end align-items-center">
+            <a class="link-secondary" href="#" aria-label="Search">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mx-3" role="img" viewBox="0 0 24 24"><title>Search</title><circle cx="10.5" cy="10.5" r="7.5"></circle><path d="M21 21l-5.2-5.2"></path></svg>
+            </a>
+            <a class="btn btn-sm btn-outline-secondary" href="#">Sign up</a>
+          </div>
+        </div>
+      </header>
+    
+      <div class="nav-scroller py-1 mb-3 border-bottom">
+        <nav class="nav nav-underline justify-content-between">
+          <a class="nav-item nav-link link-body-emphasis active" href="#">World</a>
+          <a class="nav-item nav-link link-body-emphasis" href="#">Technology</a>
+          <a class="nav-item nav-link link-body-emphasis" href="#">Design</a>
+          <a class="nav-item nav-link link-body-emphasis" href="#">Culture</a>
+          <a class="nav-item nav-link link-body-emphasis" href="#">Science</a>
+          <a class="nav-item nav-link link-body-emphasis" href="#">Health</a>
+          <a class="nav-item nav-link link-body-emphasis" href="#">Style</a>
+          <a class="nav-item nav-link link-body-emphasis" href="#">Travel</a>
+        </nav>
+      </div>
+    </div>
+    
+    <main class="container">
+      <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary">
+        <div class="col-lg-6 px-0">
+          <h1 class="display-4 fst-italic text-light text-bg-dark opacity-75">
+            HyenaDNA: A Large Language Model for the Human Genome</h1>
+          <p class="lead my-3 text-light text-bg-dark opacity-75">AI researchers from Stanford and 
+            Turing award winner Yoshua Bengio have trained a large language model on human genome data 
+            to better predict DNA profiles.</p>
+          <p class="lead mb-0 text-light "><a href="#" class="text-light-emphasis fw-bold ">Continue reading...</a></p>
+        </div>
+      </div>
+    
+      <div class="row mb-2">
+        <div class="col-md-6">
+          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-primary-emphasis">Research:</strong>
+              <h4 class="mb-0"> Can ChatGPT Do Data Science?</h4>
+              <div class="mb-1 text-body-secondary">Nov 12</div>
+              <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+                Continue reading
+                <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
+              </a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img src="robot.webp" class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-primary-emphasis">News:</strong>
+              <h4 class="mb-0">AI News Roundup: Stability Loses Senior Staff</h4>
+              <div class="mb-1 text-body-secondary">Nov 11</div>
+              <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+                Continue reading
+                <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
+              </a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img src="ai.jpg" class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="row g-5">
+        <div class="col-md-8">
+          <h3 class="pb-4 mb-4 fst-italic border-bottom">
+            From the Firehose
+          </h3>
+    
+          <article class="blog-post">
+            <h4 class="display-5 link-body-emphasis mb-1">Demystifying Deep Learning: Understanding the Basics of Neural Networks</h4>
+            <p class="blog-post-meta">January 1, 2021 by <a href="#">Emna</a></p>
+    
+            <p>Deep learning has emerged as a powerful technique within the field of artificial intelligence, revolutionizing how machines learn and make decisions. In this blog post, we will demystify deep learning, providing a clear understanding of its core concepts and shedding light on its applications.</p>
+            <hr>
+            <p>We'll start by explaining the fundamentals of deep learning. Deep learning is a subset of machine learning that utilizes neural networks, which are inspired by the human brain's structure and function. We'll explore how neural networks work, including the roles of neurons, activation functions, and layers.</p>
+            <h2>Blockquotes</h2>
+            <p>This quote highlights the importance of considering the ethical implications and potential risks associated with the rapid advancement of AI technology.</p>
+            <blockquote class="blockquote">
+              <p>provide more specific information about AI in the blockquote.</p>
+            </blockquote>
+            <p>Artificial intelligence is the science and engineering of making intelligent machines, capable of performing tasks that typically require human intelligence. It encompasses various techniques, such as machine learning and deep learning, to enable systems to learn from data, recognize patterns, and make decisions. AI has the potential to revolutionize industries and transform the way we live and work.</p>
+            <h3>Applications of Deep Learning</h3>
+            <p>Deep learning has demonstrated remarkable success across a wide range of applications. Some notable examples include:</p>
+            <ol>
+              <li>Computer Vision: Deep learning has revolutionized image recognition tasks, enabling accurate object detection, facial recognition, and image classification. Systems powered by deep learning algorithms have surpassed human-level performance on complex visual recognition tasks</li>
+              <li>Natural Language Processing (NLP): Deep learning models have significantly advanced the field of NLP, allowing machines to understand and generate human language. Applications include machine translation, sentiment analysis, chatbots, and voice assistants.</li>
+              <li>Autonomous Vehicles: Deep learning plays a crucial role in the development of self-driving cars. By analyzing real-time data from sensors such as cameras and lidar, deep learning models enable vehicles to perceive their surroundings, detect objects, and make informed decisions.</li>
+               <li>Healthcare: Deep learning techniques have shown promise in medical imaging analysis, disease diagnosis, drug discovery, and personalized medicine. They assist healthcare professionals in detecting abnormalities, predicting outcomes, and designing treatment plans.</li>
+            </ol>
+            <p>Implications and Challenges:</p>
+            <ol>
+              <li>FData Dependency: Deep learning models require large amounts of labeled data to generalize well. Obtaining and annotating high-quality datasets can be time-consuming and resource-intensive.</li>
+              <li>Computational Power: Training deep learning models often demands substantial computational resources, including powerful GPUs and specialized hardware. This can limit accessibility, particularly for smaller organizations or individuals.</li>
+              <li>Interpretability: Deep learning models are often seen as "black boxes" due to their complexity. Understanding how they arrive at their decisions can be challenging, raising concerns about transparency, fairness, and accountability.</li>
+               <li>Ethical and Privacy Concerns: Deep learning models can inadvertently learn biases present in the training data. Additionally, the handling of personal and sensitive information in applications such as healthcare and finance raises privacy and security concerns that need to be addressed.</li>
+            </ol>
+            
+            
+            <h3>conclusion:</h3>
+            <p>Deep learning represents a significant breakthrough in the field of AI, with far-reaching implications across various industries. By unraveling the fundamentals of deep learning, we have gained a clearer understanding of its inner workings, applications, and potential challenges. As technology advances and research progresses, it becomes increasingly important to address the ethical, interpretability, and privacy concerns associated with deep learning. By doing so, we can harness its power responsibly and pave.</p>
+            <pre><code>Example code block</code></pre>
+            <p>This is some additional paragraph placeholder content. It's a slightly shorter version of the other highly repetitive body text used throughout.</p>
+          </article>
+    
+          <article class="blog-post">
+            <h2 class="display-5 link-body-emphasis mb-1">Usage of AI by Individuals:</h2>
+            <p class="blog-post-meta">December 23, 2020 by <a href="#">Emna</a></p>
+    
+            <p><b>Usage of AI by Individuals:</b><br>
+                Voice Assistants: Voice-activated AI assistants like Amazon Alexa, Apple Siri, Google Assistant, and Microsoft Cortana have gained widespread adoption. As of 2021, there were an estimated 4 billion voice assistants in use worldwide.
+                
+                Smartphones: Many smartphones integrate AI capabilities into features like facial recognition, camera enhancements, virtual assistants, and predictive typing. As of 2021, there were over 3.8 billion smartphone users globally.
+                
+                Social Media and Recommendation Systems: AI algorithms power personalized recommendations, content filtering, and targeted advertising on platforms like Facebook, Instagram, Twitter, and YouTube. These platforms collectively have billions of active users.
+                
+                Virtual Chatbots: AI-powered chatbots are increasingly used for customer support, online assistance, and information retrieval on websites and messaging applications.
+                
+                Smart Home Devices: AI-driven devices like smart speakers, smart thermostats, and smart security systems are becoming more prevalent, enhancing convenience and automation in homes</p>
+            
+            <p><b>Usage of AI by Organizations:</b><br>
+                Businesses: AI is used by organizations across industries for various applications, such as customer service automation, predictive analytics, fraud detection, supply chain optimization, and demand forecasting.
+                
+                Healthcare: AI is utilized in medical imaging analysis, drug discovery, disease diagnosis, personalized medicine, and telemedicine applications. It aids in improving patient outcomes, accelerating research, and optimizing healthcare processes.
+                
+                Finance: AI is employed for fraud detection, algorithmic trading, risk assessment, customer relationship management, and chatbot-based customer support in the financial sector.
+                
+                Manufacturing and Logistics: AI enables process automation, quality control, predictive maintenance, and intelligent supply chain management in manufacturing and logistics industries.
+                
+                Transportation: AI powers autonomous vehicles, route optimization systems, traffic management, and predictive maintenance in the transportation sector.Usage of AI by Organizations:
+                Businesses: AI is used by organizations across industries for various applications, such as customer service automation, predictive analytics, fraud detection, supply chain optimization, and demand forecasting.
+                
+                Healthcare: AI is utilized in medical imaging analysis, drug discovery, disease diagnosis, personalized medicine, and telemedicine applications. It aids in improving patient outcomes, accelerating research, and optimizing healthcare processes.
+                
+                Finance: AI is employed for fraud detection, algorithmic trading, risk assessment, customer relationship management, and chatbot-based customer support in the financial sector.
+                
+                Manufacturing and Logistics: AI enables process automation, quality control, predictive maintenance, and intelligent supply chain management in manufacturing and logistics industries.
+                
+                Transportation: AI powers autonomous vehicles, route optimization systems, traffic management, and predictive maintenance in the transportation sector.</p>
+            <h3>Most Popular AI Uses in 2023</h3>
+            <p>The most popular AI uses include responding to messages, answering financial questions, planning travel itineraries and crafting social media posts as its versatility transforms everyday tasks</p>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>type</th>
+                  <th>pourcentage</th>
+                  
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Respond to people via text or email</td>
+                  <td>45%</td>
+                  
+                </tr>
+                <tr>
+                  <td>Answer financial questions</td>
+                  <td>43%</td>
+                  
+                </tr>
+                <tr>
+                  <td>Plan a travel itinerary</td>
+                  <td>38%</td>
+                  
+                </tr>
+                <tr>
+                    <td>Craft an email</td>
+                    <td>31%</td>
+                    
+                  </tr>
+                  <tr>
+                    <td>Prep for a job interview</td>
+                    <td>30%</td>
+                    
+                  </tr>
+                  <tr>
+                    <td>Write a social media post
+                    </td>
+                    <td>25%</td>
+                    
+                  </tr>
+                  <tr>
+                    <td>Summarize complex or lengthy copy
+                    </td>
+                    <td>19%</td>
+                    
+                </tr>
+              </tbody>
+              
+            </table>
+    
+            <p>Over half of respondents, 54%, believe that AI can improve written content, suggesting that AI-driven solutions such as ChatGPT have the potential to enhance text quality, creativity and efficiency in various content creation contexts.</p>
+          </article>
+    
+          <article class="blog-post">
+            <h2 class="display-5 link-body-emphasis mb-1">The Latest Feature of AI</h2>
+            <p class="blog-post-meta">December 14, 2020 by <a href="#">Emna</a></p>
+    
+            <p>Artificial Intelligence (AI) has been advancing at an astonishing pace, constantly pushing the boundaries of what machines can accomplish. With each passing year, new features and capabilities are introduced, enabling AI systems to tackle increasingly complex tasks. In this blog, we will delve into some of the exciting new features of AI that are revolutionizing various industries and transforming the way we interact with technology.</p>
+            <ul>
+              <li>Explainable AI</li>
+              <li>Federated Learning</li>
+              <li>Continual Learning</li>
+              <li>Generative AI</li>
+            </ul>
+            <p>The evolution of AI continues to introduce new features that push the boundaries of what machines can achieve. Explainable AI enhances transparency and accountability, while federated learning ensures privacy and security. </p>
+          </article>
+    
+          <nav class="blog-pagination" aria-label="Pagination">
+            <a class="btn btn-outline-primary rounded-pill" href="#">Older</a>
+            <a class="btn btn-outline-secondary rounded-pill disabled">Newer</a>
+          </nav>
+    
+        </div>
+    
+        <div class="col-md-4">
+          <div class="position-sticky" style="top: 2rem;">
+            <div class="p-4 mb-3 bg-body-tertiary rounded">
+              <h4 class="fst-italic">About</h4>
+              <p class="mb-0">hi!I'm Emy web designer and developer. Everything you need in the field of technology, you can find it here .</p>
+            </div>
+    
+            <div>
+              <h4 class="fst-italic">Recent posts</h4>
+              <ul class="list-unstyled">
+                <li>
+                  <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                    <img src="skills.jpg" class="bd-placeholder-img" width="80%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <div class="col-lg-8">
+                      <h6 class="mb-0">The Future of Work: AI's Impact on Jobs and Skills</h6>
+                      <small class="text-body-secondary">January 15, 2023</small>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                    <img src="priv.jpg" class="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect>
+                    <div class="col-lg-8">
+                      <h6 class="mb-0">AI and Privacy: Balancing Data Insights with Personal Security</h6>
+                      <small class="text-body-secondary">January 14, 2023</small>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                    <img src="robotic.jpg" class="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect>
+                    <div class="col-lg-8">
+                      <h6 class="mb-0">AI and Robotics: Advancements in Automation and Intelligent Machine</h6>
+                      <small class="text-body-secondary">January 13, 2023</small>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+    
+            <div class="p-4">
+              <h4 class="fst-italic">Archives</h4>
+              <ol class="list-unstyled mb-0">
+                <li><a href="#">March 2021</a></li>
+                <li><a href="#">February 2021</a></li>
+                <li><a href="#">January 2021</a></li>
+                <li><a href="#">December 2020</a></li>
+                <li><a href="#">November 2020</a></li>
+                <li><a href="#">October 2020</a></li>
+                <li><a href="#">September 2020</a></li>
+                <li><a href="#">August 2020</a></li>
+                <li><a href="#">July 2020</a></li>
+                <li><a href="#">June 2020</a></li>
+                <li><a href="#">May 2020</a></li>
+                <li><a href="#">April 2020</a></li>
+              </ol>
+            </div>
+    
+            <div class="p-4">
+              <h4 class="fst-italic">Elsewhere</h4>
+              <ol class="list-unstyled">
+                <li><a href="#">GitHub</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Facebook</a></li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    </main>
+    
+    <footer class="py-5 text-center text-body-secondary bg-body-tertiary">
+      <p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+      <p class="mb-0">
+        <a href="#">Back to top</a>
+      </p>
+    </footer>
+    <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> 
+        
+ </body>, initial-scale=1.0">
+ <grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration>
+</html>
